@@ -16,6 +16,10 @@ public class HotelChiangMaiApplication extends SpringBootServletInitializer {
 		return application.sources(HotelChiangMaiApplication.class);
 	}
 
+	public static void main(String[] args) {
+		SpringApplication.run(HotelChiangMaiApplication.class, args);
+	}
+
     @Bean
     public WebMvcConfigurerAdapter corsConfigurer() {
         return new WebMvcConfigurerAdapter() {
@@ -27,8 +31,4 @@ public class HotelChiangMaiApplication extends SpringBootServletInitializer {
             }
         };
     }
-
-	public static void main(String[] args) {
-		SpringApplication.run(HotelChiangMaiApplication.class, args);
-	}
 }
