@@ -1,6 +1,8 @@
 package com.ascendcorp.ctaworkshop.hotelchiangmai.controller;
 
 import com.ascendcorp.ctaworkshop.hotelchiangmai.entity.Room;
+import com.ascendcorp.ctaworkshop.hotelchiangmai.service.RoomService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -9,9 +11,12 @@ import java.util.List;
 @RequestMapping("/room")
 public class RoomController {
 
+    @Autowired
+    private RoomService roomService;
+
     @RequestMapping
-    public String getAllRoom() {
-        return "All rooms";
+    public List<Room> getAllRoom() {
+        return roomService.listAll();
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
