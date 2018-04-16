@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
+@Transactional(readOnly = true)
 public class RoomService {
 
     @Autowired
@@ -27,4 +28,6 @@ public class RoomService {
     {
         return roomRepository.save(room);
     }
+
+
 }
