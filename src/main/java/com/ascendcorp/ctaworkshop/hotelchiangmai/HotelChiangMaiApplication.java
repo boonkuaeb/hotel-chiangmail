@@ -17,11 +17,13 @@ public class HotelChiangMaiApplication extends SpringBootServletInitializer {
 	}
 
     @Bean
-    public WebMvcConfigurer corsConfigurer() {
+    public WebMvcConfigurerAdapter corsConfigurer() {
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("*").allowedOrigins("*");
+                registry.addMapping("*").allowedOrigins("*").allowedMethods("POST, GET, OPTIONS, DELETE, PATCH, PUT")
+                        .allowedHeaders("X-Requested-With, Content-Type, Accept, Origin, Cache-Control, Authorization, X-WM-AnonymousId, X-WM-CorrelationId, X-Wm-AccessToken, X-Wm-RefreshToken, X-ACT-AccessToken, X-ACT-RefreshToken, X-ACT-ByPassToken")
+                        .allowCredentials(false).maxAge(3600);
             }
         };
     }
