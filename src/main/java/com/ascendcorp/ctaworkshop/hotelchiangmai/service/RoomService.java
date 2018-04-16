@@ -4,6 +4,7 @@ import com.ascendcorp.ctaworkshop.hotelchiangmai.entity.Room;
 import com.ascendcorp.ctaworkshop.hotelchiangmai.repository.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -19,5 +20,11 @@ public class RoomService {
 
     public Room get(Long id){
         return roomRepository.findById(id);
+    }
+
+    @Transactional
+    public Room save(Room room)
+    {
+        return roomRepository.save(room);
     }
 }
