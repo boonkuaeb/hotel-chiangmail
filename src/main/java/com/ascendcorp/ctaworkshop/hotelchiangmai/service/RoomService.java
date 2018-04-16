@@ -17,7 +17,7 @@ public class RoomService {
         return roomRepository.findAll();
     }
 
-    public Room get(Integer id){
+    public Room get(Long id){
         return roomRepository.findById(id);
     }
 }

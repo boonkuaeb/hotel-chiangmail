@@ -21,7 +21,7 @@ public class RoomRepository {
         return query.getResultList();
     }
 
-    public Room findById(Integer id) {
+    public Room findById(Long id) {
         return entityManager.find(Room.class, id);
     }
 
