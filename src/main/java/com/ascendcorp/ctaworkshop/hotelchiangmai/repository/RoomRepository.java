@@ -21,4 +21,9 @@ public class RoomRepository {
         return query.getResultList();
     }
 
+    public Room findById(Integer id) {
+        return entityManager.find(Room.class, id);
+    }
+
+
 }
