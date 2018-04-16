@@ -16,4 +16,8 @@ public class RoomService {
     public List<Room> listAll(){
         return roomRepository.findAll();
     }
+
+    public Room get(Integer id){
+        return roomRepository.findById(id);
+    }
 }
