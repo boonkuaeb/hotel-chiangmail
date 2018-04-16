@@ -34,13 +34,10 @@ public class RoomRepository {
         return room;
     }
 
-
     @Transactional
     public void delete(Room room)
     {
         entityManager.remove(room);
     }
-
-
 
 }

@@ -29,5 +29,11 @@ public class RoomService {
         return roomRepository.save(room);
     }
 
+    @Transactional
+    public void delete(Long id)
+    {
+        Room roomEntity = roomRepository.findById(id);
+        roomRepository.delete(roomEntity);
+    }
 
 }
