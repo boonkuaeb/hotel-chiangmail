@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
 import java.util.List;
 @Repository
 public class RoomRepository {
@@ -23,6 +24,13 @@ public class RoomRepository {
 
     public Room findById(Long id) {
         return entityManager.find(Room.class, id);
+    }
+
+    @Transactional
+    public Room save(Room room)
+    {
+        entityManager.persist(room);
+        return room;
     }
 
 
