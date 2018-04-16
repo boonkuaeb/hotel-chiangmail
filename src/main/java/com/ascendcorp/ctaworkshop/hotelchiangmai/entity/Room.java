@@ -13,7 +13,7 @@ public class Room {
     private String name;
     @Column(name = "ROOM_NUMBER")
     private String number;
-    @Column(name = "BED_INFO")
+    @Column(name = "BED_INFO",columnDefinition = "TEXT")
     private String bedInfo;
 
     public long getId() {
