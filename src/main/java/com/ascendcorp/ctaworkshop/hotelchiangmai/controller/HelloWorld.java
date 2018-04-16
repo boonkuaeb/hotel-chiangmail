@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWorld {
     @RequestMapping("/")
     public String index() {
-        return "Greetings from Spring Boot Test deploy!";
+        return "Greetings from Spring Boot!";
     }
 }
