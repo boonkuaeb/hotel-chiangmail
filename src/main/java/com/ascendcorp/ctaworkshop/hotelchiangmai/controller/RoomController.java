@@ -25,8 +25,9 @@ public class RoomController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public String createNewRoom(@RequestBody Room roomParam) {
-        return "Create new Rooms";
+    public Room createNewRoom(@RequestBody Room roomParam) {
+        Room roomSaved = roomService.save(roomParam);
+        return roomSaved;
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
