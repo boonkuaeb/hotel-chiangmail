@@ -1,4 +1,4 @@
-CRUD Room api
+CRUD Room API
 - Endpoint : http://localhost:8080/room
 - H2 database endpoint : http://localhost:8080/h2
         - JDBC : jdbc:h2:file:~/hotel_chiengmai_db;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE;
