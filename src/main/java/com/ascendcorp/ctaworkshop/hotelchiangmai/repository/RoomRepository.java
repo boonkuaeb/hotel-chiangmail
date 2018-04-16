@@ -35,4 +35,12 @@ public class RoomRepository {
     }
 
 
+    @Transactional
+    public void delete(Room room)
+    {
+        entityManager.remove(room);
+    }
+
+
+
 }
