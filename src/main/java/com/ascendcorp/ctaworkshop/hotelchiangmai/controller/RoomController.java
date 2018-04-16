@@ -40,7 +40,7 @@ public class RoomController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public String deleteRoomById(@PathVariable Long id) {
+    public void deleteRoomById(@PathVariable Long id) {
         roomService.delete(id);
     }
 
