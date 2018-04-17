@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin(origins = "*")
-public class HelloWorld {
+public class HelloWorldController {
     @RequestMapping("/")
     public String index() {
         return "Greetings from Spring Boot!";
