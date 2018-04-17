@@ -3,6 +3,8 @@ package com.ascendcorp.ctaworkshop.hotelchiangmai.controller;
 import com.ascendcorp.ctaworkshop.hotelchiangmai.entity.Room;
 import com.ascendcorp.ctaworkshop.hotelchiangmai.service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -41,8 +43,9 @@ public class RoomController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public void deleteRoomById(@PathVariable Long id) {
+    public Room deleteRoomById(@PathVariable Long id) {
         roomService.delete(id);
+        return new Room();
     }
 
 }
