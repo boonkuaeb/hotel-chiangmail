@@ -41,7 +41,7 @@ public class HelloWorldControllerTest {
 
         try {
             this.mockMvc.perform(builder)
-                    .andExpect(MockMvcResultMatchers.content().string("Greetings from Spring Boot ja!"))
+                    .andExpect(MockMvcResultMatchers.content().string("Greetings from Spring Boot! jaaa"))
                     .andExpect(MockMvcResultMatchers.status().isOk());
         } catch (Exception e) {
             e.printStackTrace();
